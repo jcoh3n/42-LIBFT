@@ -6,7 +6,7 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 20:32:21 by jcohen            #+#    #+#             */
-/*   Updated: 2024/05/24 20:51:14 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/05/25 14:33:53 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_elem = create_new_elem(transformed_content);
 		if (!new_elem)
 		{
+			del(transformed_content);
 			free_map(map, del);
 			return (NULL);
 		}
