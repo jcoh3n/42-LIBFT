@@ -6,7 +6,7 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 17:46:35 by jcohen            #+#    #+#             */
-/*   Updated: 2024/05/22 12:20:25 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/05/26 15:29:29 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t num, size_t size)
 	void	*bloc;
 	size_t	i;
 
+	if (size > 0 && num > SIZE_MAX / size)
+		return (NULL);
 	i = 0;
 	bloc = malloc(num * size);
 	if (!bloc)
