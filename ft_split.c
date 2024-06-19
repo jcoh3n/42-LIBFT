@@ -6,7 +6,7 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:26:46 by jcohen            #+#    #+#             */
-/*   Updated: 2024/05/22 17:24:14 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/06/18 15:25:40 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static int	count_words(const char *src, char charset)
 	return (counter);
 }
 
-static void	free_all(char **arr, int size)
+static int	free_all(char **arr, int size)
 {
 	int	i;
 
@@ -66,9 +66,10 @@ static void	free_all(char **arr, int size)
 		i++;
 	}
 	free(arr);
+	return (0);
 }
 
-static void	fill_words(char const *s, char c, char **final)
+static int	fill_words(char const *s, char c, char **final)
 {
 	int	j;
 
@@ -80,16 +81,17 @@ static void	fill_words(char const *s, char c, char **final)
 		if (*s && !(*s == c))
 		{
 			final[j] = create_word(s, c);
-			if (!final[j++])
+			if (!final[j])
 			{
-				free_all(final, j);
-				return ;
+				return (free_all(final, j));
 			}
+			j++;
 		}
 		while (*s && !(*s == c))
 			s++;
 	}
 	final[j] = NULL;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -103,6 +105,7 @@ char	**ft_split(char const *s, char c)
 	final = (char **)malloc((nb_mots + 1) * sizeof(char *));
 	if (!final)
 		return (NULL);
-	fill_words(s, c, final);
+	if (!fill_words(s, c, final))
+		return (NULL);
 	return (final);
 }
