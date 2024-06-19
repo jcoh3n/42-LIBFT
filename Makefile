@@ -6,7 +6,7 @@
 #    By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/21 12:08:36 by jcohen            #+#    #+#              #
-#    Updated: 2024/06/19 12:11:39 by jcohen           ###   ########.fr        #
+#    Updated: 2024/06/19 12:40:16 by jcohen           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,8 @@ SRC_PRINTF = printf/additional_conversions.c printf/conversion_logic.c \
 			 printf/hexadecimal_operations.c printf/numeric_operations.c \
 			 printf/output_operations.c
 
+SRC_GNL = gnl/get_next_line.c gnl/get_next_line_utils.c
+
 BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 		ft_lstlast_bonus.c ft_lstadd_back_bonus.c \
 		ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c \
@@ -32,6 +34,7 @@ BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 OBJS_DIR = objs
 OBJS = $(SRC:%.c=$(OBJS_DIR)/%.o)
 PRINTF_OBJS = $(SRC_PRINTF:%.c=$(OBJS_DIR)/%.o)
+GNL_OBJS = $(SRC_GNL:%.c=$(OBJS_DIR)/%.o)
 BONUS_OBJS = $(BONUS:%.c=$(OBJS_DIR)/%.o)
 
 CC = cc
@@ -45,11 +48,11 @@ $(OBJS_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) $< -o $@
 
-$(NAME): $(OBJS) $(PRINTF_OBJS)
-	ar rcs $(NAME) $(OBJS) $(PRINTF_OBJS)
+$(NAME): $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS)
+	ar rcs $(NAME) $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS)
 
-bonus: $(OBJS) $(PRINTF_OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(PRINTF_OBJS) $(BONUS_OBJS)
+bonus: $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(PRINTF_OBJS) $(GNL_OBJS) $(BONUS_OBJS)
 
 clean:
 	$(RM) -r $(OBJS_DIR)
