@@ -6,11 +6,11 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:54:39 by jcohen            #+#    #+#             */
-/*   Updated: 2024/05/28 16:53:33 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/06/19 12:12:42 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(const char *str)
 {

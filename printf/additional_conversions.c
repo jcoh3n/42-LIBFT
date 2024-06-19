@@ -6,11 +6,11 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:42:37 by jcohen            #+#    #+#             */
-/*   Updated: 2024/05/29 15:21:44 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/06/19 12:12:19 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_conversion_pointer(va_list args)
 {

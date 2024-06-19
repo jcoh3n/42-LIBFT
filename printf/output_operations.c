@@ -6,11 +6,11 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:54:52 by jcohen            #+#    #+#             */
-/*   Updated: 2024/05/28 15:15:52 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/06/19 12:12:45 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	ft_putchar(char c)
 {
