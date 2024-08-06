@@ -6,7 +6,7 @@
 #    By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/21 12:08:36 by jcohen            #+#    #+#              #
-#    Updated: 2024/06/19 12:40:16 by jcohen           ###   ########.fr        #
+#    Updated: 2024/08/06 16:01:08 by jcohen           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ SRC = ft_strlen.c ft_toupper.c ft_tolower.c ft_strrchr.c ft_strnstr.c ft_strncmp
 	  ft_substr.c ft_itoa.c ft_split.c ft_strtrim.c ft_strmapi.c ft_striteri.c \
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRC_PRINTF = printf/additional_conversions.c printf/conversion_logic.c \
-			 printf/basic_conversions.c printf/ft_printf.c \
-			 printf/hexadecimal_operations.c printf/numeric_operations.c \
-			 printf/output_operations.c
+SRC_PRINTF = additional_conversions.c conversion_logic.c \
+			 basic_conversions.c ft_printf.c \
+			 hexadecimal_operations.c numeric_operations.c \
+			 output_operations.c
 
-SRC_GNL = gnl/get_next_line.c gnl/get_next_line_utils.c
+SRC_GNL = get_next_line.c get_next_line_utils.c
 
 BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 		ft_lstlast_bonus.c ft_lstadd_back_bonus.c \
