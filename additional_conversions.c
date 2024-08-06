@@ -6,11 +6,11 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:42:37 by jcohen            #+#    #+#             */
-/*   Updated: 2024/06/19 12:12:19 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/07/10 17:57:15 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "./ft_printf.h"
 
 int	ft_conversion_pointer(va_list args)
 {
@@ -22,13 +22,13 @@ int	ft_conversion_pointer(va_list args)
 	size = 0;
 	if (!ptr)
 	{
-		ft_putstr("(nil)");
+		ft_putstr_printf("(nil)");
 		size = 5;
 	}
 	else
 	{
 		ad = (uintptr_t)ptr;
-		ft_putstr("0x");
+		ft_putstr_printf("0x");
 		size = 2 + ft_putnbrhexa_ptr(ad);
 	}
 	return (size);

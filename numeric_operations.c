@@ -6,13 +6,13 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:54:39 by jcohen            #+#    #+#             */
-/*   Updated: 2024/06/19 12:12:42 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/07/10 17:57:32 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "./ft_printf.h"
 
-int	ft_strlen(const char *str)
+int	ft_strlen_printf(const char *str)
 {
 	int	len_str;
 
@@ -22,13 +22,13 @@ int	ft_strlen(const char *str)
 	return (len_str);
 }
 
-int	ft_putnbr(long n)
+int	ft_putnbr_long(long n)
 {
 	int	size;
 
 	size = 0;
 	if (n >= 10)
-		size += ft_putnbr(n / 10);
+		size += ft_putnbr_long(n / 10);
 	ft_putchar(n % 10 + '0');
 	size++;
 	return (size);

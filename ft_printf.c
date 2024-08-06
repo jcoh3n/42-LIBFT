@@ -6,11 +6,11 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 18:54:50 by jcohen            #+#    #+#             */
-/*   Updated: 2024/06/19 12:12:33 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/07/10 17:57:19 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "./ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
