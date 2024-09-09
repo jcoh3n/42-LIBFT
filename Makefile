@@ -6,7 +6,7 @@
 #    By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/21 12:08:36 by jcohen            #+#    #+#              #
-#    Updated: 2024/09/08 16:35:51 by jcohen           ###   ########.fr        #
+#    Updated: 2024/09/09 17:30:15 by jcohen           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,3 +63,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re bonus
+.SILENT: $(NAME) $(OBJS) $(OBJS_DIR) $(BONUS_OBJS)
