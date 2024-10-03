@@ -6,7 +6,7 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 19:24:23 by jcohen            #+#    #+#             */
-/*   Updated: 2024/07/13 18:40:01 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/09/09 19:25:44 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 43
 # endif
 
 int		ft_strchr_gnl(char *str, char c);
