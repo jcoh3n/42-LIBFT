@@ -6,7 +6,7 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 16:28:14 by jcohen            #+#    #+#             */
-/*   Updated: 2024/05/22 15:09:54 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/10/03 19:36:10 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,26 +33,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int	main(void)
-{
-	char	*s;
-	char	*result;
-
-	s = "Hello, World!";
-	unsigned int start = 7; // Commence à l'index 7 ("W")
-	size_t len = 5;         // Copie 5 caractères à partir de l'index 7
-	// Appel de ft_substr
-	result = ft_substr(s, start, len);
-	if (result)
-	{
-		printf("Substr Result: %s\n", result);
-		free(result); // Libération de la mémoire allouée pour result
-	}
-	else
-	{
-		printf("Substring extraction failed.\n");
-	}
-	return (0);
-}
-*/
