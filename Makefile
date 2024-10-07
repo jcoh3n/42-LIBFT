@@ -6,7 +6,7 @@
 #    By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/21 12:08:36 by jcohen            #+#    #+#              #
-#    Updated: 2024/10/03 17:57:47 by jcohen           ###   ########.fr        #
+#    Updated: 2024/10/07 12:41:15 by jcohen           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS = ft_strlen.c ft_toupper.c ft_tolower.c ft_strrchr.c ft_strnstr.c ft_strncm
        ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_atol.c \
        additional_conversions.c basic_conversions.c conversion_logic.c \
        ft_printf.c hexadecimal_operations.c numeric_operations.c \
-       output_operations.c ft_isspace.c \
+       output_operations.c ft_isspace.c ft_strcmp.c \
        get_next_line.c get_next_line_utils.c
 
 BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
