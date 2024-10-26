@@ -6,13 +6,15 @@
 /*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:17:25 by jcohen            #+#    #+#             */
-/*   Updated: 2024/10/07 12:41:21 by jcohen           ###   ########.fr       */
+/*   Updated: 2024/10/25 22:52:37 by jcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "ft_printf.h"
+# include "get_next_line.h"
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
