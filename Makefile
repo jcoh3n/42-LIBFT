@@ -6,7 +6,7 @@
 #    By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/21 12:08:36 by jcohen            #+#    #+#              #
-#    Updated: 2024/10/07 12:41:15 by jcohen           ###   ########.fr        #
+#    Updated: 2025/01/20 17:18:27 by jcohen           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,9 +46,7 @@ BONUS_DEPS = $(BONUS_OBJS:.o=.d)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo -n "$(YELLOW)Creating library archive...$(RESET)"
 	@ar rcs $(NAME) $(OBJS)
-	@echo "$(GREEN)Done!$(RESET)"
 
 bonus: $(OBJS) $(BONUS_OBJS)
 	@echo -n "$(YELLOW)Creating library archive with bonus...$(RESET)"
@@ -57,9 +55,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 
 $(OBJS_DIR)/%.o: %.c
 	@mkdir -p $(OBJS_DIR)
-	@echo -n "$(YELLOW)Compiling $<...$(RESET)"
 	@$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
-	@echo "$(GREEN)Done!$(RESET)"
 
 clean:
 	@echo -n "$(YELLOW)Cleaning up object files...$(RESET)"
