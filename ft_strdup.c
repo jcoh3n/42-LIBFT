@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcohen <jcohen@student.42.fr>              +#+  +:+       +#+        */
+/*   By: j <j@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 20:21:05 by jcohen            #+#    #+#             */
-/*   Updated: 2025/02/17 11:53:48 by jcohen           ###   ########.fr       */
+/*   Updated: 2025/02/17 13:39:09 by j                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s)
 {
 	size_t	len;
 	char	*duplicate;
-	char *empty;
+	char	*empty;
 
 	if (!s)
 	{
